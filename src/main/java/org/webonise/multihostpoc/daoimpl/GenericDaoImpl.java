@@ -66,7 +66,7 @@ public class GenericDaoImpl<T,PK extends Serializable> implements GenericDao<T> 
             sessionImpl.connection().setReadOnly(readOnlyFlag);
         }
         catch (Exception e){
-            LOG.error("Error occured in prepping the session.");
+            LOG.error("Error occured in prepping the session.",e);
         }
     }
 
